@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,900&display=swap');
+html{
+	font-family:sans-serif;
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%
+}
+
+body{
+	margin:0;
+	padding-bottom: 20px;
+	background-color: #F4F7F9;
+}
+
+img {
+	margin-bottom: 10px;
+}
+
+#cont_head {
+	position: static;
+	height: 66.5px;
+}
+
+#headtext {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+	color: white;
+	margin: 0px 0px 20px 0px;
+	padding: 21px 10px 20px 15px;
+    background-color: #0075B0;
+    border-bottom: 5px solid #F4F7F9;
+    font-weight: 900;
+    min-height: 119px;
+    width: 100%;
+    font-size: 32px;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.1;
+    z-index: 100;
+}
+
+/*
+div #headtext::after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	left: 0px;
+	top: 0px;
+	width: 100vw;
+	height: 124px;
+	background-color: #0075B0;
+	border-bottom: 5px solid #F4F7F9;
+	max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    div #headtext::after {
+        height: 140px;
+		border-bottom: 0;
+	}
+}
+*/
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	padding-top: 20px;
+    line-height: 1.1;
+}
+
+.statichead {
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	top: 0px;
+}
+
+#main-input {
+  max-width:600px; 
+  margin-top: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  #main-input {
+    margin-top: 50%;
+  }
+}
