@@ -41,6 +41,7 @@ ui <- fluidPage(
                    checkboxInput("post", "Show post-period", value = TRUE))
         ),
         fluidRow(
+            textOutput("mspe"),
             plotlyOutput("synth_graph"),
         )
     )
@@ -78,7 +79,8 @@ server <- function(input, output) {
         )
     })
     
-    output$synth_graph <- renderPlotly(
+    output$synth_graph <- renderPlotly({
+        req(md())
         ggplotly(
             gg_synth(md = md(), 
                      post = input$post,
@@ -88,8 +90,14 @@ server <- function(input, output) {
                       legend.position = "bottom")
         ) %>% 
             layout(legend = list(orientation = "h", x = 0.4, y = -0.2))
+    }
     )
-    
+    output$mspe <- renderText({
+        req(md())
+        mspe <- pre_MSPE(md())
+        
+        paste0("Pre-intervention mean squared prediction error = ", mspe)
+    })
 }
 
 
