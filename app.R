@@ -1,6 +1,5 @@
 library(tidyverse)
 library(Synth)
-library(SPHSUgraphs)
 library(plotly)
 
 load('Data/synth_data_c.rdata') # outputted from 'Synth_data.R'
