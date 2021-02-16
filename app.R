@@ -2,9 +2,9 @@ library(tidyverse)
 library(Synth)
 library(plotly)
 
-load('Data/synth_data_c.rdata') # outputted from 'Synth_data.R'
-load("Data/filtered_itsp.rdata")  # outputted from 'Synth_create_sps.R'
-load("Data/other_predictors.rdata")
+load('data/synth_data_c.rdata') # outputted from 'Synth_data.R'
+load("data/filtered_itsp.rdata")  # outputted from 'Synth_create_sps.R'
+load("data/other_predictors.rdata")
 
 countries <- unique(synthData_u18_filt %>% 
                         filter(Country!="England and Wales") %>% 
